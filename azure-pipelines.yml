@@ -19,6 +19,7 @@ steps:
     versionSpec: '3.7'
     addToPath: true
     architecture: 'x64'
+  name: pyTools
 
 - script: 'python -m pip install --upgrade pip setuptools wheel'
   displayName: 'Install tools'
