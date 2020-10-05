@@ -25,6 +25,9 @@ steps:
 
 - script: 'pip install -r Python_code\requirements.txt'
   displayName: 'Install requirements'
+  
+- script: pythonLocation=$(pyTools.pythonLocation)
+  displayName: 'Set python location env var'
 
 
 - task: VSBuild@1
