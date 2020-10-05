@@ -6,12 +6,16 @@
 
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'vs2017-win2016'
 
 variables:
   solution: '**/*.sln'
   buildPlatform: 'x64'
   buildConfiguration: 'Release'
+  
+variables:
+- name: PYTHON_LOCATION
+  value: 'undefined'
 
 steps:
 - task: UsePythonVersion@0
@@ -27,8 +31,8 @@ steps:
 - script: 'pip install -r Python_code\requirements.txt'
   displayName: 'Install requirements'
   
-- script: set PYTHON_LOCATION=$(pyTools.pythonLocation)
-  displayName: 'Set python location env var'
+- bash: echo '##vso[task.setvariable variable=PYTHON_LOCATION]$(pyTools.pythonLocation)'
+  displayName: 'Set new variable value'
 
 
 - task: VSBuild@1
