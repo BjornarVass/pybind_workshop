@@ -123,13 +123,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(pythonLocation)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(PYTHON_LOCATION)\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(pythonLocation)\libs</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(PYTHON_LOCATION)\libs</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
