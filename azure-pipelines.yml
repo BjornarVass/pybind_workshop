@@ -12,10 +12,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'x64'
   buildConfiguration: 'Release'
-  
-variables:
-- name: PYTHON_LOCATION
-  value: 'undefined'
+  PYTHON_LOCATION: 'undefined'
 
 steps:
 - task: UsePythonVersion@0
